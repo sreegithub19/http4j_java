@@ -3,7 +3,7 @@ name: Docker Workflow
 on:
   push:
     branches:
-      - main
+      - kotlin_
 
 jobs:
   build-and-run:
@@ -24,7 +24,7 @@ jobs:
 ############################### Java ###############################
       - name: Build Application docker - 1
         run: |
-          docker build -t simple-http-server .
-          # docker run -p 8080:8080 simple-http-server
-          docker tag simple-http-server sreedockerhub19/simple-http-server:latest
-          docker push sreedockerhub19/simple-http-server:latest
+          docker build -t simple-http-server-kotlin .
+          # docker run -p 8080:8080 simple-http-server-kotlin
+          docker tag simple-http-server-kotlin sreedockerhub19/simple-http-server-kotlin:latest
+          docker push sreedockerhub19/simple-http-server-kotlin:latest
